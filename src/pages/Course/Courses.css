@@ -1,0 +1,56 @@
+/* Courses.css */
+.courses .box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.courses .box:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@keyframes glowingBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Rotating Border Effect */
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Inner White Background */
+.courses .box .content {
+  position: relative;
+  z-index: 3;
+  background: white;
+  border-radius: 8px;
+  margin: 4px;
+}
+
+/* Ensure the image and text are above the borders */
+.courses .images,
+.courses .text,
+.courses .user,
+.courses .flex {
+  position: relative;
+  z-index: 4;
+}
